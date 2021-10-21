@@ -1,0 +1,12 @@
+<div *ngIf="allInfo" class="container">
+        <ul>
+        <li >
+          <h1>{{ allInfo.name }}</h1>
+          <img [src]="allInfo.image" [alt]="allInfo.name">
+          <h5>Status:<span> {{allInfo.status}}</span></h5>
+          <h5>Especie:<span> {{allInfo.species}}</span></h5>
+          <h5>Género:<span> {{allInfo.gender}}</span></h5>
+          <h5>Planeta de origen:<span> {{allInfo.location.name}}</span></h5>
+        </li>
+      </ul>
+</div>

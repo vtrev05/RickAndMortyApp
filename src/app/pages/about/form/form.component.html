@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="title">ABOUT US</h1>
+  <h3>Si te ha gustado el contenido que ofrecemos y crees que podrías echarnos una mano a la hora de crear contenido, dar soporte, o tienes alguna idea que consideras que puede mejorar nuestro espacio, no dudes en rellenar el formulario y nos pondremos en contacto contigo lo antes posible</h3>
+</div>
+
+<h2>Formulario de Registro:</h2>
+
+
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="userRegisterForm">
+	<fieldset>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" formControlName="name" />
+    <div *ngIf="!userRegisterForm.get('name')?.valid &&
+        (userRegisterForm.get('name')?.dirty  || submitted)">
+      El nombre que has introducido hace que Rick vomite... cámbialo, por favor.
+    </div>
+  </fieldset>
+	
+	<fieldset>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" />
+    <div *ngIf="!userRegisterForm.get('password')?.valid &&
+        (userRegisterForm.get('password')?.dirty || submitted)">
+      Has introducido una contraseña que el amo y señor Morty no aprueba. Cámbiala.
+    </div>
+  </fieldset>
+
+	<fieldset>
+    <label for="passwordRepeat">Repeat password:</label>
+    <input type="password" id="passwordRepeat" formControlName="passwordRepeat" />
+    <div *ngIf="!userRegisterForm.get('passwordRepeat')?.valid &&
+        (userRegisterForm.get('passwordRepeat')?.dirty  || submitted)">
+      Tu contraseña no coincide. Haz que coincidan o Rick sacará el portal gun!
+    </div>
+  </fieldset>
+
+	<button type="submit" [disabled]="!userRegisterForm?.valid">Submit</button>
+
+</form>

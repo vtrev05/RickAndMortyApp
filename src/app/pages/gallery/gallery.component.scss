@@ -1,0 +1,60 @@
+$mainColor: #35b13c;
+$yellow: #b2c455;
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+body{
+    background-image: url('https://us.123rf.com/450wm/robybret/robybret1107/robybret110700003/9967533-ilustraci%C3%B3n-de-una-escena-de-noche-de-cielo-estrellado.jpg?ver=6');
+    color: $mainColor;
+    font-family: 'DotGothic16', sans-serif;
+}
+.introImg{
+    display: block;
+    width: 100%;
+    margin: 0  auto;
+    max-width: 500px;
+}
+.title{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px auto 40px auto;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    ul{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        text-align: center;
+        li{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            list-style-type: none;
+            width: 90%;
+            max-width: 550px;
+            border: 2px solid $mainColor;
+            border-radius: 5px;
+            margin: 0 auto 30px auto;
+            padding: 15px 15px 40px;
+            cursor: pointer;
+            h4 {
+                display: block;
+                font-size: 1.5rem;
+                
+            }
+            img{
+                width: 100%;
+                border-radius: 8px;
+                max-width: 320px;
+                border: 2px solid $mainColor;
+                margin: 0 auto;
+            }
+            h5{
+                margin: 10px auto;
+                color: $yellow;
+            }
+        }
+    }
+}

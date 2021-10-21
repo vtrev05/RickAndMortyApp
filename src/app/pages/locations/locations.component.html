@@ -1,0 +1,11 @@
+<div *ngIf="locationList">
+    <h3 class="title">Location List</h3>
+    <div class="container" *ngFor="let location of locationList let index = index" >
+        <ul>
+        <li>
+            <h4>{{location.type}}</h4>
+          <h4 >{{ location.name }}</h4>
+          <h4>{{location.dimension}}</h4>
+        </li>
+      </ul>
+</div>

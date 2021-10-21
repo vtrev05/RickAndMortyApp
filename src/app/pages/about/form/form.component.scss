@@ -1,0 +1,54 @@
+$mainColor: #35b13c;
+$yellow: #b2c455;
+.container{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+h2{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    fieldset{
+        margin: 10px auto;
+        padding: 10px;
+        width: 90%;
+        max-width: 290px;
+        border: 2px solid $mainColor;
+        border-radius: 5px;
+        label{
+            margin:0 10px;
+            color: $yellow;
+        }
+        input{
+            background-color: $yellow;
+            margin: 0 auto;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 45%;
+            color: black;
+        }
+        
+    }
+}
+button{
+        display: block;
+        width: 80%;
+        max-width: 350px;
+        margin: 30px auto 90px auto;
+        padding: 15px;
+        border: 2px solid $yellow;
+        border-radius: 8px;
+        cursor: pointer;
+        color: $yellow;
+        font-size: 1rem;
+        background-color: #152573;
+        font-family: 'Goudy Bookletter 1911', serif;
+    }
