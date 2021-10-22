@@ -1,5 +1,6 @@
 $mainColor: #35b13c;
 $yellow: #b2c455;
+$buttonbck: #152573;
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 body{
@@ -7,16 +8,23 @@ body{
     color: $mainColor;
     font-family: 'DotGothic16', sans-serif;
 }
-.introImg{
-    display: block;
-    width: 100%;
-    margin: 0  auto;
-    max-width: 500px;
-}
 .title{
     text-align: center;
     font-size: 24px;
     margin: 20px auto 40px auto;
+}
+button{
+    display: block;
+    width: 80%;
+    max-width: 150px;
+    margin: 60px auto;
+    padding: 15px;
+    border: 2px solid $yellow;
+    border-radius: 8px;
+    cursor: pointer;
+    color: $yellow;
+    font-size: 1rem;
+    background-color: $buttonbck;
 }
 .container{
     width: 100%;
@@ -52,10 +60,6 @@ body{
                 max-width: 320px;
                 border: 2px solid $mainColor;
                 margin: 0 auto;
-            }
-            h5{
-                margin: 10px auto;
-                color: $yellow;
             }
         }
     }

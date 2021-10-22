@@ -1,5 +1,7 @@
 <div *ngIf="episodesList">
     <h3 class="title">Episodes List</h3>
+    <button (click)="nextPage()">Next</button>
+    <button (click)="previousPage()">Previous</button>
     <div class="container" *ngFor="let episode of episodesList let index = index" >
         <ul>
         <li>

@@ -1,5 +1,7 @@
 <div *ngIf="locationList">
     <h3 class="title">Location List</h3>
+    <button (click)="nextPage()">Next</button>
+    <button (click)="previousPage()">Previous</button>
     <div class="container" *ngFor="let location of locationList let index = index" >
         <ul>
         <li>

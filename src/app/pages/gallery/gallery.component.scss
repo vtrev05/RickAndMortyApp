@@ -1,18 +1,13 @@
 $mainColor: #35b13c;
 $yellow: #b2c455;
 $border: #e3584d;
+$buttonbck: #152573;
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 body{
     background-image: url('https://us.123rf.com/450wm/robybret/robybret1107/robybret110700003/9967533-ilustraci%C3%B3n-de-una-escena-de-noche-de-cielo-estrellado.jpg?ver=6');
     color: $mainColor;
     font-family: 'DotGothic16', sans-serif;
-}
-.introImg{
-    display: block;
-    width: 100%;
-    margin: 0  auto;
-    max-width: 500px;
 }
 .title{
     text-align: center;
@@ -30,12 +25,9 @@ button{
     cursor: pointer;
     color: $yellow;
     font-size: 1rem;
-    background-color: #152573;
-    font-family: 'Goudy Bookletter 1911', serif;
+    background-color: $buttonbck;
 }
 .container{
-    width: 100%;
-    margin: 0 auto;
     ul{
         margin: 0 auto;
         display: flex;
@@ -57,20 +49,14 @@ button{
             background-image: url('https://media.giphy.com/media/l0K4lUxBzIOeJd1EA/giphy.gif');
             h4 {
                 display: block;
-                font-size: 1.5rem;
-                
+                font-size: 1.5rem; 
             }
             img{
                 width: 100%;
                 border-radius: 8px;
                 max-width: 320px;
                 border: 2px solid $mainColor;
-                margin: 0 auto;
-                
-            }
-            h5{
-                margin: 10px auto;
-                color: $yellow;
+                margin: 0 auto;  
             }
         }
     }

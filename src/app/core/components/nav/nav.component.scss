@@ -1,6 +1,6 @@
 $mainColor: #35b13c;
 $yellow: #b2c455;
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 
 body{
     background-image: url('https://us.123rf.com/450wm/robybret/robybret1107/robybret110700003/9967533-ilustraci%C3%B3n-de-una-escena-de-noche-de-cielo-estrellado.jpg?ver=6');
@@ -15,16 +15,11 @@ body{
     max-width: 500px;
     padding-bottom: 70px;
 }
-a{
-    text-decoration: none;
-    color: $mainColor;
-}
+
 ul{
     margin: 0 auto;
     padding: 0;
-    text-align: center;
     display: flex;
-    flex-direction: row;
     li{
         display: flex;
         justify-content: space-evenly;

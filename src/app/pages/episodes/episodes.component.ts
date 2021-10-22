@@ -9,6 +9,7 @@ import { Episodes } from '../locations/locations';
 })
 export class EpisodesComponent implements OnInit {
   episodesList: Episodes[] = [];
+  public index = 1;
   constructor(private request: HttpClient) { }
 
   ngOnInit(): void {
@@ -16,5 +17,16 @@ export class EpisodesComponent implements OnInit {
       this.episodesList = res.results
     })
   }
-
+  nextPage() {
+    this.index = this.index + 1
+    this.request.get<any>(`https://rickandmortyapi.com/api/episode?page=${this.index}`).subscribe(res => {
+      this.episodesList = res.results
+    })
+  }
+  previousPage() {
+    this.index = this.index - 1
+    this.request.get<any>(`https://rickandmortyapi.com/api/episode?page=${this.index}`).subscribe(res => {
+      this.episodesList = res.results
+    })
+  }
 }
