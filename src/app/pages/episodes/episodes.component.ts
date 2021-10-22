@@ -13,7 +13,6 @@ export class EpisodesComponent implements OnInit {
 
   ngOnInit(): void {
     this.request.get<any>('https://rickandmortyapi.com/api/episode').subscribe(res => {
-      console.log(res)
       this.episodesList = res.results
     })
   }

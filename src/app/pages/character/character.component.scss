@@ -38,6 +38,8 @@ body{
             border-radius: 5px;
             margin-bottom: 30px;
             padding: 15px 15px 40px;
+            background-image: url("https://media.giphy.com/media/DTh1K6VuivY0gEuzWy/giphy.gif");
+            background-size: cover;
             h4 {
                 display: block;
                 font-size: 1.5rem;
@@ -49,6 +51,7 @@ body{
                 max-width: 320px;
                 border: 2px solid $mainColor;
                 margin: 0 auto;
+                
             }
             h5{
                 margin: 10px auto;

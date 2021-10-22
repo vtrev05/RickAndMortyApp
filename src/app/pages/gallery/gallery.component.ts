@@ -9,13 +9,24 @@ import { Character } from '../locations/locations';
 })
 export class GalleryComponent implements OnInit {
   characterList: Character[] = [];
+  public index = 1;
   constructor(private request: HttpClient) { }
       
   ngOnInit(): void {
     this.request.get<any>('https://rickandmortyapi.com/api/character').subscribe(res => {
-      console.log(res)
       this.characterList = res.results
     })
   }
-
+  nextPage() {
+    this.index = this.index + 1
+    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(res => {
+      this.characterList = res.results
+    })
+  }
+  previousPage() {
+    this.index = this.index - 1
+    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(res => {
+      this.characterList = res.results
+    })
+  }
 }

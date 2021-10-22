@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./character.component.scss']
 })
 export class CharacterComponent implements OnInit {
-  public recoveredId!: string | null;
+  public recoveredId!: any;
   public allInfo: any;
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -17,11 +17,10 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
     this.recoveredId = this.activatedRoute.snapshot.paramMap.get('id')
-    this.http.get('https://rickandmortyapi.com/api/character/' + this.recoveredId).subscribe(res => {
-      this.allInfo = res
-      console.log(this.allInfo)
+    this.http.get('https://rickandmortyapi.com/api/character/' + this.recoveredId).subscribe(finalResult => {
+      this.allInfo = finalResult
     })
     
   }
-
+  
 }

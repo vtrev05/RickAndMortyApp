@@ -1,5 +1,9 @@
 <div *ngIf="characterList">
     <h3 class="title">Character List</h3>
+    <button (click)="nextPage()">Next</button>
+    <button (click)="previousPage()">Previous</button>
+    
+    
     <div class="container" *ngFor="let character of characterList let index = index" >
         <ul>
         <li [routerLink]="['/character/' + character.id]">

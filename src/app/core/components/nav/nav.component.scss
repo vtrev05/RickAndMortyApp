@@ -31,10 +31,23 @@ ul{
         list-style-type: none;
         width: 90%;
         max-width: 550px;
-
         border-radius: 5px;
         margin: 0 auto 30px auto;
         margin-bottom: 30px;
         padding: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .introImg{
+        padding-bottom: 30px;
+    }
+    ul{
+        flex-direction: column;
+        li{
+            border-radius: 5px;
+            margin: 0 auto 30px auto;
+            margin-bottom: 30px;
+            padding: 0px;
+        }
     }
 }

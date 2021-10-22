@@ -1,5 +1,6 @@
 $mainColor: #35b13c;
 $yellow: #b2c455;
+$border: #e3584d;
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 body{
@@ -15,8 +16,22 @@ body{
 }
 .title{
     text-align: center;
-    font-size: 24px;
-    margin: 20px auto 40px auto;
+    font-size: 2.5rem;
+    margin: 50px auto;
+}
+button{
+    display: block;
+    width: 80%;
+    max-width: 150px;
+    margin: 60px auto;
+    padding: 15px;
+    border: 2px solid $yellow;
+    border-radius: 8px;
+    cursor: pointer;
+    color: $yellow;
+    font-size: 1rem;
+    background-color: #152573;
+    font-family: 'Goudy Bookletter 1911', serif;
 }
 .container{
     width: 100%;
@@ -33,12 +48,13 @@ body{
             justify-content: space-around;
             list-style-type: none;
             width: 90%;
-            max-width: 550px;
+            max-width: 500px;
             border: 2px solid $mainColor;
             border-radius: 5px;
             margin: 0 auto 30px auto;
             padding: 15px 15px 40px;
             cursor: pointer;
+            background-image: url('https://media.giphy.com/media/l0K4lUxBzIOeJd1EA/giphy.gif');
             h4 {
                 display: block;
                 font-size: 1.5rem;
@@ -50,6 +66,7 @@ body{
                 max-width: 320px;
                 border: 2px solid $mainColor;
                 margin: 0 auto;
+                
             }
             h5{
                 margin: 10px auto;
