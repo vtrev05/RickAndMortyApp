@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { Episodes } from '../locations/locations';
+import { Episodes } from '../../shared/model/shared';
 
 @Component({
   selector: 'app-episodes',
@@ -13,20 +13,20 @@ export class EpisodesComponent implements OnInit {
   constructor(private request: HttpClient) { }
 
   ngOnInit(): void {
-    this.request.get<any>('https://rickandmortyapi.com/api/episode').subscribe(res => {
-      this.episodesList = res.results
+    this.request.get<any>('https://rickandmortyapi.com/api/episode').subscribe(finalResults => {
+      this.episodesList = finalResults.results
     })
   }
   nextPage() {
     this.index = this.index + 1
-    this.request.get<any>(`https://rickandmortyapi.com/api/episode?page=${this.index}`).subscribe(res => {
-      this.episodesList = res.results
+    this.request.get<any>(`https://rickandmortyapi.com/api/episode?page=${this.index}`).subscribe(finalResults => {
+      this.episodesList = finalResults.results
     })
   }
   previousPage() {
     this.index = this.index - 1
-    this.request.get<any>(`https://rickandmortyapi.com/api/episode?page=${this.index}`).subscribe(res => {
-      this.episodesList = res.results
+    this.request.get<any>(`https://rickandmortyapi.com/api/episode?page=${this.index}`).subscribe(finalResults => {
+      this.episodesList = finalResults.results
     })
   }
 }

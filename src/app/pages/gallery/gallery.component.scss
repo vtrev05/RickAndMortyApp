@@ -2,6 +2,7 @@ $mainColor: #35b13c;
 $yellow: #b2c455;
 $border: #e3584d;
 $buttonbck: #152573;
+
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 body{
@@ -11,7 +12,7 @@ body{
 }
 .title{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     margin: 50px auto;
 }
 button{
@@ -40,11 +41,11 @@ button{
             justify-content: space-around;
             list-style-type: none;
             width: 90%;
-            max-width: 500px;
+            max-width: 400px;
             border: 2px solid $mainColor;
             border-radius: 5px;
             margin: 0 auto 30px auto;
-            padding: 15px 15px 40px;
+            padding: 0 20px 20px;
             cursor: pointer;
             background-image: url('https://media.giphy.com/media/l0K4lUxBzIOeJd1EA/giphy.gif');
             h4 {

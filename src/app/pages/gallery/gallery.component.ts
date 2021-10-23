@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { Character } from '../locations/locations';
+import { Character } from '../../shared/model/shared';
 
 @Component({
   selector: 'app-gallery',
@@ -10,23 +10,24 @@ import { Character } from '../locations/locations';
 export class GalleryComponent implements OnInit {
   characterList: Character[] = [];
   public index = 1;
+  public filter!: string;
   constructor(private request: HttpClient) { }
       
   ngOnInit(): void {
-    this.request.get<any>('https://rickandmortyapi.com/api/character').subscribe(res => {
-      this.characterList = res.results
+    this.request.get<any>('https://rickandmortyapi.com/api/character').subscribe(finalResults => {
+      this.characterList = finalResults.results
     })
   }
   nextPage() {
     this.index = this.index + 1
-    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(res => {
-      this.characterList = res.results
+    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(finalResults => {
+      this.characterList = finalResults.results
     })
   }
   previousPage() {
     this.index = this.index - 1
-    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(res => {
-      this.characterList = res.results
+    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(finalResults => {
+      this.characterList = finalResults.results
     })
   }
 }
